@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Book Searching API</title>
+
+<!-------------
+    CSS DESIGN
+--------------->
+ <style>
+       
+.div-master{
+    background-image: url("books.jpg");
+  
+    width: 100%;
+    min-height: 700px;
+    overflow: hidden;
+}
+
+.header-text{
+    text-align: center;
+    color: rgb(15, 15, 15);
+    font-size: 50px;
+
+}
+
+.searching-div{
+    display: flex;
+    height: 50px;
+}
+
+.text_field{
+    margin-left: 30%;
+    width: 35%;
+    height: 40px;
+    font-size: 26px;
+    display: inline-block;
+}
+
+/* ..........
+button design
+............. */
+button {
+    display: inline-block;
+    height: 45px;
+    width: 70px;
+    background-color: rgb(247, 236, 236); 
+    color: black; 
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+  
+.cards{
+    width: 100%;
+    height: auto;
+}
+
+.card_holder{
+    margin-left: 8%;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #08080899;
+    width: 80%;
+    min-height: 450px;
+   
+}
+
+.card {
+    box-shadow: 0 5px 7px 0 rgba(15, 15, 15, 0.2);
+    width: 20%;
+    border-radius: 7px;
+    border: 1px solid whitesmoke;
+    margin: 20px;
+    color: white;
+}
+
+
+ 
+img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: auto;
+}
+.image-div{
+    overflow: hidden;
+    height: 330px;
+}
+  
+.container {
+    padding: 2px 15px;
+}
+
+
+.not_found{
+    display: none;
+    width: 80%;
+    color: rgb(197, 61, 20);
+    text-align: center;
+    background-color: #1d1a1a99;
+    margin-left: 8%;
+    border: 1px solid white;
+   
+}
+
+.CountTotalFound{
+    display: none;
+    width: 80%;
+    color: white;
+    text-align: center;
+    background-color: #14131399;
+    margin-left: 9%;
+    border: 1px solid whitesmoke;
+ 
+}
+
+
+    </style>
+  
+</head>
+
+<body>
+    
+    <main>
+        <div class="div-master">
+            <h2 class="header-text">Welcome to your open books library World</h2>
+            <div class="searching-div">
+                <textarea id="Field-Searching" class="text_field"></textarea>
+                <button id="Search-Button"> Search </button>
+            </div>
+            <br>
+            <br>
+            <div id="not_found" class="not_found">
+                <h1>!!!..Searched Item Not Found..!!! </h1>
+            </div>
+            <div id="CountTotalFound" class="CountTotalFound">
+                <h1>  Search Result: <span id="Search-Result"></span></h1>
+            </div>
+            <br>
+            <br>
+            <div class="output">
+            
+                <div id="output_div" class="card_holder">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </main>
+
+    <script src="book.js"></script>
+
+</body>
+
+</html>
